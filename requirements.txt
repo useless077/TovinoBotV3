@@ -12,7 +12,6 @@ pytesseract
 speedtest-cli
 countryinfo
 python-telegram-bot==11.1.0
-pyromod~=1.5
 yt_dlp
 
 
