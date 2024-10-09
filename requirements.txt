@@ -14,7 +14,7 @@ carbonnow==0.0.1
 python-telegram-bot==11.1.0
 # yt_dlp
 
-
+pyrogram
 pyrofork
 tgcrypto 
 pymongo[srv]==3.12.3 
