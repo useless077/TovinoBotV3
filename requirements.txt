@@ -1,18 +1,17 @@
 # git+https://github.com/subinps/pyrogram@inline-m
 # from old requirments
 imdbpy
-youtube_search_python
 carbonnow==0.0.1
 # string-extract
 # domain-extract
 # hashtags_extract
-# Pymoe
-# pendulum
-# pytesseract
-# speedtest-cli
-# countryinfo
+Pymoe
+pendulum
+pytesseract
+speedtest-cli
+countryinfo
 python-telegram-bot==11.1.0
-# yt_dlp
+yt_dlp
 
 pyrogram
 pyrofork
