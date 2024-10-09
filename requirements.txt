@@ -13,8 +13,7 @@ countryinfo
 python-telegram-bot==11.1.0
 yt_dlp
 
-pyrogram
-pyrofork
+
 tgcrypto 
 pymongo[srv]==3.12.3 
 motor==2.5.1 
