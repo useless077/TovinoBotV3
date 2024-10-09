@@ -78,6 +78,9 @@ openai==0.25.0
 #resolve super init error
 Flask<= 3.0.0
 gunicorn<= 21.2.0
+pyrogram>=2.0.106
+
+#react
 
 werkzeug==2.0.2
 itsdangerous==2.0.1
