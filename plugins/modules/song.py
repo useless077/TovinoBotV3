@@ -64,7 +64,7 @@ def a(update, message):
                  return
 
             performer = f"[Anything]" 
-            thumb_name = f'thumb{message.message_id}.jpg'
+            thumb_name = f'thumb{message.id}.jpg'
             thumb = requests.get(thumbnail, allow_redirects=True) 
             open(thumb_name, 'wb').write(thumb.content)
 
@@ -101,7 +101,7 @@ def a(update, message):
         duration=dur,
         performer=performer,
         thumb=thumb_name,
-        reply_to_message_id=message.message_id
+        reply_to_message_id=message.id
         )
         m.delete()
     except Exception as e:
