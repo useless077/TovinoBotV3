@@ -1,20 +1,5 @@
-# git+https://github.com/subinps/pyrogram@inline-m
-# from old requirments
-imdbpy
-carbonnow==0.0.1
-# string-extract
-# domain-extract
-# hashtags_extract
-Pymoe
-pendulum
-pytesseract
-speedtest-cli
-countryinfo
-python-telegram-bot==11.1.0
-yt_dlp
-
-
-tgcrypto 
+pyrogram>=2.0.106
+tgcrypto<=1.2.3 
 pymongo[srv]==3.12.3 
 motor==2.5.1 
 marshmallow==3.14.1 
@@ -25,7 +10,7 @@ git+https://github.com/Joelkb/cinemagoer
 shortzy 
 datetime 
 pytz 
-aiohttp
+aiohttp<=3.8.2
 
 #---master---# 
 #Telethroid==0.0.10 
@@ -58,7 +43,6 @@ ujson
 wget 
 pytz
 aiofiles
-hachoir
 dnspython==2.3.0
 ### googletrans==4.0.0-rc1 ###
 python-decouple
@@ -68,23 +52,17 @@ ytthumb
 jinja2
 apscheduler
 pyshorteners
-pyromod==1.5
+pyromod
 colorama
 openai==0.25.0
-
-##reaction
-## reaction
-
-#resolve super init error
+jinja2
 Flask<= 3.0.0
 gunicorn<= 21.2.0
+##https://github.com/pyrogram/pyrogram/archive/master.zip
 
-
-#react
+## reaction
 
 werkzeug==2.0.2
 itsdangerous==2.0.1
 https://codeload.github.com/KurimuzonAkuma/pyrogram/zip/refs/heads/dev
 sending
-
-  
