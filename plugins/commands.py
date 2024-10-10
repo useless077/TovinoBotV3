@@ -25,11 +25,13 @@ async def start(client, message: pyrogram.types.Message):
 
     if message.chat.type in ['group', 'supergroup']:
         buttons = [[
-        InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true') ] ,
-      [
-        InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about_menu'),
-        InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')
-    ]]
+            InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+        ],[
+            InlineKeyboardButton('🤩 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ', url="https://t.me/TownBus"),
+            InlineKeyboardButton('🎭 Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url='https://t.me/MovieDiscussion24x7')
+        ],[
+            InlineKeyboardButton('📢 🇹​​🇦​​🇲​​🇮​​🇱​ ​🇲​​🇴​​🇻​​🇮​​🇪​ 5️⃣​🇰', url='https://t.me/TamilMovies5K')
+        ]]
        
         reply_markup = InlineKeyboardMarkup(buttons)
         if not START_IMAGE_URL:
@@ -71,12 +73,13 @@ async def start(client, message: pyrogram.types.Message):
     if len(message.command) != 2:
 
         buttons = [[
-        InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true') ] ,
-      [
-        InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about_menu'),
-        InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')
-    ]]
-
+            InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+        ],[
+            InlineKeyboardButton('🤩 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ', url="https://t.me/TownBus"),
+            InlineKeyboardButton('🎭 Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url='https://t.me/MovieDiscussion24x7')
+        ],[
+            InlineKeyboardButton('📢 🇹​​🇦​​🇲​​🇮​​🇱​ ​🇲​​🇴​​🇻​​🇮​​🇪​ 5️⃣​🇰', url='https://t.me/TamilMovies5K')
+        ]]
         reply_markup = InlineKeyboardMarkup(buttons)
 
         await message.reply_photo(
@@ -121,18 +124,22 @@ async def start(client, message: pyrogram.types.Message):
     if len(message.command) == 2 and message.command[1] in ["subscribe", "error", "okay", "help"]:
 
         buttons = [[
-        InlineKeyboardButton('➕ ᴀᴅᴅ ᴍᴇ ᴛᴏ ʏᴏᴜʀ ɢʀᴏᴜᴘ ➕', url=f'http://t.me/{temp.U_NAME}?startgroup=true') ] ,
-      [
-        InlineKeyboardButton('ᴀʙᴏᴜᴛ', callback_data='about_menu'),
-        InlineKeyboardButton('ᴄʟᴏsᴇ', callback_data='close')
-    ]]
-        
+                InlineKeyboardButton('⤬ Aᴅᴅ Mᴇ Tᴏ Yᴏᴜʀ Gʀᴏᴜᴘ ⤬', url=f'http://t.me/{temp.U_NAME}?startgroup=true')
+            ],[
+                InlineKeyboardButton('🤩 ᴍᴀɪɴ ᴄʜᴀɴɴᴇʟ', url='https://t.me/TownBus'),
+                InlineKeyboardButton('🎭 Mᴏᴠɪᴇ Gʀᴏᴜᴘ', url='https://t.me/MovieDiscussion24x7')
+            ],[
+                InlineKeyboardButton('🙋 Hᴇʟᴘ', callback_data='about_menu'),
+                InlineKeyboardButton('🧐 ᴄʟᴏsᴇ', callback_data='close')
+            ],[
+                InlineKeyboardButton('📢 🇹​​🇦​​🇲​​🇮​​🇱​ ​🇲​​🇴​​🇻​​🇮​​🇪​ 5️⃣​🇰', url='https://t.me/TamilMovies5K')
+            ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
             photo=START_IMAGE_URL if START_IMAGE_URL else random.choice(PICS),
             caption=script.START_TXT.format(message.from_user.mention, temp.U_NAME, temp.B_NAME),
             reply_markup=reply_markup,
-            parse_mode='html'
+            parse_mode=enums.ParseMode.HTML,
         )
         return
     data = message.command[1]
@@ -512,7 +519,7 @@ async def settings(client, message):
             text=f"<b>Change Your Settings for {title} As Your Wish ⚙</b>",
             reply_markup=reply_markup,
             disable_web_page_preview=True,
-            parse_mode="html",
+            parse_mode=enums.ParseMode.HTML,
             reply_to_message_id=message.id
         )
 
