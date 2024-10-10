@@ -47,6 +47,7 @@ DATABASE_NAME = environ.get('DATABASE_NAME', "TamilBots")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Telegram_files')
 
 # Others
+PORT = environ.get("PORT", "8000")
 LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002062053288'))
 SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'MovieDiscussion24x7')
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
